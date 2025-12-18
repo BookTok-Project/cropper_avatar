@@ -39,11 +39,11 @@ android {
 
 
 dependencies {
-  // Use available versions that are confirmed to exist in repositories
-  implementation("androidx.core:core-ktx:1.17.0") // From booktok-android
-  implementation("androidx.activity:activity-ktx:1.10.1") // Available version
-  implementation("androidx.appcompat:appcompat:1.7.0") // Try this version
-  implementation("androidx.exifinterface:exifinterface:1.3.7") // Try this version
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2") // From booktok-android
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2") // From booktok-android
+  // Use versions compatible with AGP 8.9.1
+  implementation("androidx.core:core-ktx:1.13.1")
+  implementation("androidx.activity:activity-ktx:1.9.2")
+  implementation("androidx.appcompat:appcompat:1.7.0")
+  implementation("androidx.exifinterface:exifinterface:1.3.7")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
 }
