@@ -27,5 +27,8 @@ jobs:
           distribution: 'zulu'
           java-version: ${{ matrix.java_version }}
 
+      - name: Format code with ktlint
+        run: ./gradlew ktlintFormat --stacktrace
+      
       - name: Build with Gradle
         run: ./gradlew ktlint testDebug build --stacktrace
