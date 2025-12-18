@@ -4,12 +4,7 @@ plugins {
   id("org.jetbrains.kotlin.plugin.parcelize")
 }
 
-apply(plugin = "app.cash.licensee")
-
-tasks.named("licenseeAndroidDebug").configure {
-  // Allow all licenses for now
-  enabled = false
-}
+// Licensee plugin removed - not needed for library build
 
 android {
   namespace = "com.canhub.cropper"
