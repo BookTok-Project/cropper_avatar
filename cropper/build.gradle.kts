@@ -4,6 +4,8 @@ plugins {
   id("org.jetbrains.kotlin.plugin.parcelize")
 }
 
+apply(plugin = "app.cash.licensee")
+
 android {
   namespace = "com.canhub.cropper"
 
