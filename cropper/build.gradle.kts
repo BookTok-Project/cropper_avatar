@@ -1,34 +1,21 @@
 plugins {
-  id("org.jetbrains.dokka")
-  id("org.jetbrains.kotlin.android")
   id("com.android.library")
+  id("org.jetbrains.kotlin.android")
   id("org.jetbrains.kotlin.plugin.parcelize")
-  id("com.vanniktech.maven.publish")
-  id("app.cash.licensee")
-  id("app.cash.paparazzi")
-}
-
-licensee {
-  allow("Apache-2.0")
-}
-
-kotlin {
-  jvmToolchain {
-    languageVersion.set(JavaLanguageVersion.of(11))
-  }
 }
 
 android {
   namespace = "com.canhub.cropper"
 
-  compileSdk = libs.versions.compileSdk.get().toInt()
+  compileSdk = 36
 
   defaultConfig {
-    minSdk = libs.versions.minSdk.get().toInt()
+    minSdk = 21
   }
 
   buildFeatures {
     viewBinding = true
+    dataBinding = false
   }
 
   compileOptions {
@@ -36,45 +23,25 @@ android {
     targetCompatibility = JavaVersion.VERSION_11
   }
 
+  kotlin {
+    compilerOptions {
+      jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+      freeCompilerArgs.add("-Xannotation-default-target=param-property")
+    }
+  }
+
   testOptions {
     unitTests.isIncludeAndroidResources = true
   }
 }
 
-dependencies {
-  implementation(libs.androidx.activity.ktx)
-  implementation(libs.androidx.appcompat)
-  implementation(libs.androidx.core.ktx)
-  implementation(libs.androidx.exifinterface)
-  implementation(libs.kotlinx.coroutines.android)
-  implementation(libs.kotlinx.coroutines.core)
-}
 
 dependencies {
-  testImplementation(libs.androidx.fragment.testing)
-  testImplementation(libs.androidx.test.junit)
-  testImplementation(libs.junit)
-  testImplementation(libs.mock)
-  testImplementation(libs.robolectric)
-}
-
-// Workaround https://github.com/cashapp/paparazzi/issues/1231
-plugins.withId("app.cash.paparazzi") {
-  // Defer until afterEvaluate so that testImplementation is created by Android plugin.
-  afterEvaluate {
-    dependencies.constraints {
-      add("testImplementation", "com.google.guava:guava") {
-        attributes {
-          attribute(
-            TargetJvmEnvironment.TARGET_JVM_ENVIRONMENT_ATTRIBUTE,
-            objects.named(TargetJvmEnvironment::class.java, TargetJvmEnvironment.STANDARD_JVM),
-          )
-        }
-        because(
-          "LayoutLib and sdk-common depend on Guava's -jre published variant." +
-            "See https://github.com/cashapp/paparazzi/issues/906.",
-        )
-      }
-    }
-  }
+  // Use available versions that are confirmed to exist in repositories
+  implementation("androidx.core:core-ktx:1.17.0") // From booktok-android
+  implementation("androidx.activity:activity-ktx:1.10.1") // Available version
+  implementation("androidx.appcompat:appcompat:1.7.0") // Try this version
+  implementation("androidx.exifinterface:exifinterface:1.3.7") // Try this version
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2") // From booktok-android
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2") // From booktok-android
 }

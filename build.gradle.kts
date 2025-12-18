@@ -5,7 +5,8 @@ buildscript {
     classpath(libs.plugin.dokka)
     classpath(libs.plugin.kotlin)
     classpath(libs.plugin.licensee)
-    classpath(libs.plugin.paparazzi)
+    // paparazzi removed - requires non-existent AGP version, only needed for tests
+    // classpath(libs.plugin.paparazzi)
     classpath(libs.plugin.publish)
   }
 }

@@ -17,18 +17,19 @@
         android:layout_gravity="bottom"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:background="@android:color/black"
-        android:padding="16dp">
+        android:background="#E6000000"
+        android:padding="20dp"
+        android:paddingBottom="24dp">
 
         <ImageButton
             android:id="@+id/btnClose"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:background="@drawable/cropper_button_ripple"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/cropper_button_glass_no_stroke"
             android:contentDescription="Закрыть"
             android:scaleType="fitXY"
             android:src="@drawable/ic_close_24"
-            android:tint="@color/booktok_primary" />
+            android:tint="@color/error_red" />
 
         <Space android:layout_width="0dp" android:layout_weight="1" android:layout_height="1dp" />
 
@@ -40,47 +41,51 @@
 
             <ImageButton
                 android:id="@+id/btnRotateRight"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:background="@drawable/cropper_button_ripple"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/cropper_button_glass"
                 android:src="@drawable/ic_rotate_right_24"
                 android:contentDescription="Повернуть"
-                android:tint="@color/booktok_primary" />
+                android:tint="@color/icon_white" />
 
             <ImageButton
                 android:id="@+id/btnFlipH"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:background="@drawable/cropper_button_ripple"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/cropper_button_glass"
                 android:contentDescription="Отразить по горизонтали"
                 android:src="@drawable/ic_flip_24"
-                android:tint="@color/booktok_primary" />
+                android:tint="@color/icon_white" />
 
             <ImageButton
                 android:id="@+id/btnFlipV"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:background="@drawable/cropper_button_ripple"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/cropper_button_glass"
                 android:contentDescription="Отразить по вертикали"
                 android:src="@drawable/ic_flip_24_v2"
-                android:tint="@color/booktok_primary" />
+                android:tint="@color/icon_white" />
         </LinearLayout>
 
         <Space android:layout_width="0dp" android:layout_weight="1" android:layout_height="1dp" />
 
         <FrameLayout
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:background="@drawable/cropper_check_gradient_bg"
             android:layout_gravity="center_vertical"
-            android:elevation="4dp">
+            android:elevation="8dp"
+            android:padding="2dp">
             <ImageButton
                 android:id="@+id/btnCrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/cropper_crop_button_ripple"
                 android:contentDescription="Обрезать"
-                android:padding="16dp"
+                android:padding="18dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_check_24"
                 android:tint="@color/booktok_on_primary" />

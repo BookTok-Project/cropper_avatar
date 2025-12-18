@@ -7,9 +7,17 @@
 <!-- BookTok Theme Colors -->
 <color name="booktok_primary">#A535FD</color>
 <color name="booktok_primary_dark">#8B2DD9</color>
+<color name="booktok_primary_light">#BD89E9</color>
 <color name="booktok_on_primary">#FFFFFFFF</color>
 <color name="booktok_background_light">#FFFFFFFF</color>
 <color name="booktok_background_dark">#000000</color>
 <color name="booktok_surface_light">#F1F1F1</color>
 <color name="booktok_surface_dark">#232323</color>
+<!-- Glassmorphism colors -->
+<color name="glass_background">#40000000</color>
+<color name="glass_background_pressed">#60000000</color>
+<color name="icon_white">#FFFFFFFF</color>
+<color name="icon_white_secondary">#B3FFFFFF</color>
+<!-- Error colors (from BookTok dark theme) -->
+<color name="error_red">#FFB4AB</color>
 </resources>
