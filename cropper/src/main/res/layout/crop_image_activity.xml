@@ -24,11 +24,11 @@
             android:id="@+id/btnClose"
             android:layout_width="44dp"
             android:layout_height="44dp"
-            android:background="@android:color/transparent"
+            android:background="@drawable/cropper_button_ripple"
             android:contentDescription="Закрыть"
             android:scaleType="fitXY"
             android:src="@drawable/ic_close_24"
-            android:tint="@color/tropic_orange" />
+            android:tint="@color/booktok_primary" />
 
         <Space android:layout_width="0dp" android:layout_weight="1" android:layout_height="1dp" />
 
@@ -42,28 +42,28 @@
                 android:id="@+id/btnRotateRight"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/cropper_button_ripple"
                 android:src="@drawable/ic_rotate_right_24"
                 android:contentDescription="Повернуть"
-                android:tint="@android:color/white" />
+                android:tint="@color/booktok_primary" />
 
             <ImageButton
                 android:id="@+id/btnFlipH"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/cropper_button_ripple"
                 android:contentDescription="Отразить по горизонтали"
                 android:src="@drawable/ic_flip_24"
-                android:tint="@android:color/white" />
+                android:tint="@color/booktok_primary" />
 
             <ImageButton
                 android:id="@+id/btnFlipV"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/cropper_button_ripple"
                 android:contentDescription="Отразить по вертикали"
                 android:src="@drawable/ic_flip_24_v2"
-                android:tint="@android:color/white" />
+                android:tint="@color/booktok_primary" />
         </LinearLayout>
 
         <Space android:layout_width="0dp" android:layout_weight="1" android:layout_height="1dp" />
@@ -72,17 +72,18 @@
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:background="@drawable/cropper_check_gradient_bg"
-            android:layout_gravity="center_vertical">
+            android:layout_gravity="center_vertical"
+            android:elevation="4dp">
             <ImageButton
                 android:id="@+id/btnCrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/transparent"
+                android:background="@drawable/cropper_crop_button_ripple"
                 android:contentDescription="Обрезать"
                 android:padding="16dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_check_24"
-                android:tint="@android:color/white" />
+                android:tint="@color/booktok_on_primary" />
         </FrameLayout>
     </LinearLayout>
 </FrameLayout>

@@ -2,8 +2,8 @@
     android:shape="oval">
     <gradient
         android:type="linear"
-        android:angle="0"
-        android:startColor="#43A047"
-        android:endColor="#26C6DA"/>
+        android:angle="135"
+        android:startColor="@color/booktok_primary"
+        android:endColor="@color/booktok_primary_dark"/>
     <size android:width="72dp" android:height="72dp" />
 </shape> 
